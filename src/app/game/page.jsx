@@ -1248,8 +1248,6 @@ socket.on('passwordChanged', ({ message }) => {
           <div className="table-info">
             Mesa {currentTableNumber}
           <div className="table-amount">20.000</div>
-          <div className="table-info">
-            Mesa {currentTableNumber}
           </div>
           <div className={`turn-status ${isYourTurn ? 'your-turn-indicator' : 'wait-turn-indicator'}`}>
             {isYourTurn ? "Tu turno" : "Espere su turno"}
