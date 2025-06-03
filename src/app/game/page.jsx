@@ -35,8 +35,8 @@ const HideLogoEffect = () => {
 };
 
 export default function Game() {
-  // Función para generar un tablero local con distribución perfecta
-  const generateLocalBoard = () => {
+    // En la función generateLocalBoard, cambiar los valores:
+const generateLocalBoard = () => {
     const localBoard = [];
 
     // Para cada hilera
@@ -45,10 +45,10 @@ export default function Game() {
 
       // Crear 2 fichas ganadoras (+20000) y 2 perdedoras (-20000) para esta hilera
       for (let i = 0; i < 2; i++) {
-        rowTiles.push({ value: 20000, revealed: false });  // Asegurarse que es positivo
+        rowTiles.push({ value: 20000, revealed: false });  // Cambiado a 20000
       }
       for (let i = 0; i < 2; i++) {
-        rowTiles.push({ value: -20000, revealed: false }); // Asegurarse que es negativo
+        rowTiles.push({ value: -20000, revealed: false }); // Cambiado a -20000
       }
 
       // Mezclarlas
@@ -61,11 +61,10 @@ export default function Game() {
       localBoard.push(...rowTiles);
     }
 
-    // Validación adicional para verificar los valores
-    console.log('Tablero local generado:', localBoard.map(tile => tile.value));
-
+    console.log('Tablero local generado con valores ±20000:', localBoard.map(tile => tile.value));
     return localBoard;
-  };
+};
+
 
   const [board, setBoard] = useState([]);
   const [currentPlayer, setCurrentPlayer] = useState(null);
